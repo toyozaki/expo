@@ -14,12 +14,12 @@ on:
       - tools/**
       - packages/**
       - yarn.lock
-  pull_request:
-    paths:
-      - .github/workflows/sdk.yml
-      - tools/**
-      - packages/**
-      - yarn.lock
+  # pull_request:
+  #   paths:
+  #     - .github/workflows/sdk.yml
+  #     - tools/**
+  #     - packages/**
+  #     - yarn.lock
   schedule:
     - cron: 0 14 * * *
 

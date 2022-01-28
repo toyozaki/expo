@@ -85,7 +85,6 @@ buildscript {
     maven { url "https://www.jitpack.io" }
     mavenCentral()
     google()
-    jcenter()
   }
   dependencies {
     classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${safeExtGet('kotlinVersion', '1.6.10')}")
@@ -99,6 +98,7 @@ repositories {
 
 android {
   compileSdkVersion safeExtGet("compileSdkVersion", 30)
+  ndkVersion "23.0.7421159"
 
   compileOptions {
     sourceCompatibility = '1.8'
@@ -216,7 +216,7 @@ import org.apache.tools.ant.taskdefs.condition.Os
 
 class GenerateDynamicMacrosPlugin implements Plugin<Project> {
   @Override
-  void apply(Project target) {
+  void apply(org.gradle.api.Project target) {
     target.exec {
       def configuration = target.gradle.startParameter.taskNames.any {
         it.toLowerCase().contains("release")
@@ -365,7 +365,7 @@ dependencies {
 
   // expo-av
   // See explanation in expo-av/build.gradle
-  api 'com.google.android.exoplayer:extension-okhttp:2.9.2'
+  api 'com.google.android.exoplayer:extension-okhttp:2.13.3'
 
   // expo-application
   api 'com.android.installreferrer:installreferrer:1.0'

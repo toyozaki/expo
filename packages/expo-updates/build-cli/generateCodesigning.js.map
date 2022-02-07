@@ -1,0 +1,1 @@
+{"version":3,"file":"generateCodesigning.js","sourceRoot":"","sources":["../cli/generateCodesigning.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,KAAK,UAAU,wBAAwB;IAC5C,OAAO,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC;AACrB,CAAC","sourcesContent":["export async function generateCodesigningAsync() {\n  console.log('wat');\n}\n"]}

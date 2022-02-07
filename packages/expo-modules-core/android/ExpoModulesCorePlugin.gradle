@@ -1,0 +1,28 @@
+def DEFAULT_KOTLIN_VERSION = '1.6.10'
+
+class ExpoModulesCore implements Plugin<Project> {
+  void apply(Project project) {
+    project.buildscript {
+      // Simple helper that allows the root project to override versions declared by this library.
+      project.ext.safeExtGet = { prop, fallback ->
+        project.rootProject.ext.has(prop) ? project.rootProject.ext.get(prop) : fallback
+      }
+
+      project.ext.kotlinVersion = {
+        project.rootProject.ext.has("kotlinVersion") ? project.rootProject.ext.get("kotlinVersion") : DEFAULT_KOTLIN_VERSION
+      }
+
+      repositories {
+        mavenCentral()
+      }
+
+      dependencies {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${project.ext.kotlinVersion()}")
+      }
+    }
+  }
+}
+
+ext.applyExpoModulesCorePlugin = {
+  apply plugin: ExpoModulesCore
+}

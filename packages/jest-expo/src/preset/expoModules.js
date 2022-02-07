@@ -1042,6 +1042,86 @@ module.exports = {
         'MediaView',
       ],
     },
+    viewManagersMetadata: {
+      AdIconView: {
+        propsNames: [],
+      },
+      AdOptionsView: {
+        propsNames: ['nativeAdViewTag', 'iconColor'],
+      },
+      CTKBannerView: {
+        propsNames: ['placementId', 'size'],
+      },
+      CTKNativeAd: {
+        propsNames: ['adsManager'],
+      },
+      ExpoAdsAdMobBannerView: {
+        propsNames: ['additionalRequestParams', 'bannerSize', 'adUnitID'],
+      },
+      ExpoAdsPublisherBannerView: {
+        propsNames: ['additionalRequestParams', 'bannerSize', 'adUnitID'],
+      },
+      ExpoAppleAuthenticationButtonContinueBlack: {
+        propsNames: ['cornerRadius'],
+      },
+      ExpoAppleAuthenticationButtonContinueWhite: {
+        propsNames: ['cornerRadius'],
+      },
+      ExpoAppleAuthenticationButtonContinueWhiteOutline: {
+        propsNames: ['cornerRadius'],
+      },
+      ExpoAppleAuthenticationButtonSignInBlack: {
+        propsNames: ['cornerRadius'],
+      },
+      ExpoAppleAuthenticationButtonSignInWhite: {
+        propsNames: ['cornerRadius'],
+      },
+      ExpoAppleAuthenticationButtonSignInWhiteOutline: {
+        propsNames: ['cornerRadius'],
+      },
+      ExpoAppleAuthenticationButtonSignUpBlack: {
+        propsNames: ['cornerRadius'],
+      },
+      ExpoAppleAuthenticationButtonSignUpWhite: {
+        propsNames: ['cornerRadius'],
+      },
+      ExpoAppleAuthenticationButtonSignUpWhiteOutline: {
+        propsNames: ['cornerRadius'],
+      },
+      ExpoBarCodeScannerView: {
+        propsNames: ['type', 'barCodeTypes'],
+      },
+      ExpoBlurView: {
+        propsNames: ['intensity', 'tint'],
+      },
+      ExpoLinearGradient: {
+        propsNames: ['colors', 'startPoint', 'endPoint', 'locations'],
+      },
+      ExpoVideoView: {
+        propsNames: ['status', 'resizeMode', 'useNativeControls', 'source'],
+      },
+      ExponentCamera: {
+        propsNames: [
+          'faceDetectorEnabled',
+          'focusDepth',
+          'barCodeScannerEnabled',
+          'faceDetectorSettings',
+          'pictureSize',
+          'zoom',
+          'flashMode',
+          'type',
+          'whiteBalance',
+          'autoFocus',
+          'barCodeScannerSettings',
+        ],
+      },
+      ExponentGLView: {
+        propsNames: ['msaaSamples'],
+      },
+      MediaView: {
+        propsNames: [],
+      },
+    },
   },
   RNAWSCognito: {
     computeModPow: { type: 'function', functionType: 'async' },
